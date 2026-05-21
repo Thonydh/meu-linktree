@@ -1,0 +1,102 @@
+/* Reseta os padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página e alinhamento central */
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal para o celular/desktop */
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Estilo da foto de perfil */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00b37e; /* Cor de destaque (verde tecnologia) */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #a8a8b3;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #c4c4cc;
+}
+
+/* Organiza os botões em coluna */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo padrão dos botões */
+.link-btn {
+    display: block;
+    background-color: #202024;
+    color: #e1e1e6;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #323238;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito ao passar o mouse por cima dos botões */
+.link-btn:hover {
+    background-color: #323238;
+    transform: translateY(-3px);
+}
+
+/* Botão de destaque para o WhatsApp */
+.destaque {
+    background-color: #00875f;
+    border-color: #00875f;
+    margin-top: 10px;
+}
+
+.destaque:hover {
+    background-color: #00b37e;
+    border-color: #00b37e;
+}
+
+/* Assinatura no rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #7c7c8a;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
