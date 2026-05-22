@@ -1,102 +1,105 @@
-/* Reseta os padrões do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* RESET E CONFIGURAÇÕES GERAIS */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-/* Fundo da página e alinhamento central */
-body {
-    background-color: #121214;
-    color: #e1e1e6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
+/* A mágica do clique rolar a página suavemente está aqui: */
+html { scroll-behavior: smooth; }
 
-/* Container principal para o celular/desktop */
-.container {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
+body { background-color: #121214; color: #e1e1e6; line-height: 1.6; }
 
-/* Estilo da foto de perfil */
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #00b37e; /* Cor de destaque (verde tecnologia) */
-    margin-bottom: 20px;
-    object-fit: cover;
-}
+.container { width: 100%; max-width: 1000px; margin: 0 auto; text-align: center; padding: 20px; }
 
-h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
+/* ESTILOS DO TOPO (HERO) */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 40px; }
 
-h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #a8a8b3;
-    margin-bottom: 15px;
-}
+.profile-pic { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #00b37e; margin-bottom: 20px; object-fit: cover; }
 
-.bio {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    color: #c4c4cc;
-}
+h1 { font-size: 2rem; margin-bottom: 5px; }
+h2 { font-size: 1.1rem; color: #a8a8b3; font-weight: 400; margin-bottom: 20px; }
+.bio { font-size: 0.95rem; color: #c4c4cc; margin-bottom: 30px; }
 
-/* Organiza os botões em coluna */
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+/* BOTÕES LINKTREE */
+.links { display: flex; flex-direction: column; gap: 15px; }
 
-/* Estilo padrão dos botões */
 .link-btn {
-    display: block;
-    background-color: #202024;
-    color: #e1e1e6;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid #323238;
-    transition: background-color 0.3s, transform 0.2s;
+    display: block; background-color: #202024; color: #e1e1e6; text-decoration: none; padding: 16px;
+    border-radius: 8px; font-weight: 600; border: 1px solid #323238; transition: 0.3s;
+}
+.link-btn:hover { background-color: #323238; transform: translateY(-3px); }
+
+.destaque { background-color: #00875f; border-color: #00875f; margin-top: 10px; }
+.destaque:hover { background-color: #00b37e; border-color: #00b37e; }
+
+/* ESTILOS DAS SEÇÕES DE CONTEÚDO */
+.section-content { padding: 80px 20px; min-height: 100vh; display: flex; align-items: center; }
+.dark-bg { background-color: #0d0d0f; } /* Fundo um pouco mais escuro para diferenciar as partes */
+
+.section-content h2 { color: #00b37e; font-size: 1.8rem; margin-bottom: 15px; }
+.section-content p { color: #c4c4cc; margin-bottom: 30px; }
+
+/* CARDS DE SERVIÇOS (Preços) */
+.cards-grid { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
+
+.card { background-color: #202024; padding: 25px; border-radius: 10px; border: 1px solid #323238; text-align: left; }
+.card h3 { color: #fff; margin-bottom: 10px; }
+.card p { font-size: 0.9rem; margin-bottom: 15px; }
+.preco { display: inline-block; font-weight: bold; color: #00b37e; font-size: 1.1rem; }
+
+/* LISTA DE SERVIÇOS (Sistemas e Dados) */
+.service-list ul { text-align: left; list-style: none; }
+.service-list li { margin-bottom: 15px; padding: 15px; background-color: #202024; border-radius: 8px; border-left: 4px solid #00b37e; }
+
+/* BOTÕES ESPECIAIS */
+.btn-teste { display: inline-block; background-color: #8257e5; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-weight: bold; transition: 0.3s; margin-bottom: 20px; }
+.btn-teste:hover { background-color: #996dff; }
+
+.back-top { display: inline-block; margin-top: 20px; color: #a8a8b3; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+.back-top:hover { color: #fff; }
+
+/* RODAPÉ */
+footer { text-align: center; padding: 30px; font-size: 0.85rem; color: #7c7c8a; font-weight: bold; letter-spacing: 1px; }
+/* Adicione isso no seu style.css, pode ser no final do arquivo */
+.section-image {
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho máximo para não perder qualidade */
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Adiciona uma sombra suave */
+}
+/* Estrutura para colocar lado a lado */
+.section-flex {
+    display: flex;
+    align-items: center; /* Alinha no meio verticalmente */
+    justify-content: space-between;
+    gap: 40px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 20px;
 }
 
-/* Efeito ao passar o mouse por cima dos botões */
-.link-btn:hover {
-    background-color: #323238;
-    transform: translateY(-3px);
+/* Deixa a imagem maior e ocupando até metade do espaço */
+.section-flex .section-image {
+    width: 50%;
+    max-width: 500px; /* Aumentamos de 400px para 500px */
+    margin-bottom: 0;
 }
 
-/* Botão de destaque para o WhatsApp */
-.destaque {
-    background-color: #00875f;
-    border-color: #00875f;
-    margin-top: 10px;
+/* O texto ocupa a outra metade e fica alinhado à esquerda */
+.section-flex .text-content {
+    width: 50%;
+    text-align: left;
 }
 
-.destaque:hover {
-    background-color: #00b37e;
-    border-color: #00b37e;
-}
-
-/* Assinatura no rodapé */
-footer {
-    margin-top: 40px;
-    font-size: 0.85rem;
-    color: #7c7c8a;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* REGRA PARA CELULAR: Volta a ficar um embaixo do outro */
+@media (max-width: 768px) {
+    .section-flex {
+        flex-direction: column; /* Empilha verticalmente */
+    }
+    
+    .section-flex .section-image,
+    .section-flex .text-content {
+        width: 100%; /* Ocupam a tela toda no celular */
+    }
+    
+    .section-flex .section-image {
+        margin-bottom: 30px;
+    }
 }
