@@ -103,3 +103,23 @@ footer { text-align: center; padding: 30px; font-size: 0.85rem; color: #7c7c8a; 
         margin-bottom: 30px;
     }
 }
+/* Botão do WhatsApp dentro dos cards */
+.btn-card-whats {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #00875f;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%; /* Faz o botão ocupar a largura do card */
+    text-align: center;
+}
+
+.btn-card-whats:hover {
+    background-color: #00b37e;
+    transform: translateY(-2px);
+}
